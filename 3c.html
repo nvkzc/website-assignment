@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Website</title>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="main">
+            <h1>Welcome to My Website</h1>
+            <div class="grid">
+                <img src="flower1.jpeg" alt="Image 1">
+                <img src="flower2.jpeg" alt="Image 2">
+                <img src="flower3.jp3g" alt="Image 3">
+                <img src="flower1.jpeg" alt="Image 4">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+<style>
+  /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    left: -9999px; /* Hide the link */
+}
+
+.skip-link:focus {
+    left: 0; /* Show the link when focused */
+    top: 0;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Navigation Bar */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #575757; /* Change background on hover */
+}
+
+/* Container with Grid Layout */
+.container {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Space between items */
+}
+
+/* Image Styles using Box Model */
+.grid img {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc; /* Border for images */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+.grid img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* nth-child selector */
+.grid img:nth-child(even) {
+    border-radius: 20px; /* Different border-radius for even images */
+}
+
+</style>
